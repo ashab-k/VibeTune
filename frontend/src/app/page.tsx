@@ -6,10 +6,10 @@ export default function SearchMusic() {
   const [results, setResults] = useState([]);
 
   const handleSearch = async () => {
-    const response = await fetch("http://127.0.0.1:4000/search", {
+    const response = await fetch("http://0.0.0.0:4000/search", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query, top_k: 5, similarity_threshold: 0.2 }),
+      body: JSON.stringify({ query, top_k: 20, similarity_threshold: 0.2 }),
     });
 
     const data = await response.json();
