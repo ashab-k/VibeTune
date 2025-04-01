@@ -1,5 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
+import Twitter from "next-auth/providers/twitter";
 
 export const authOptions: NextAuthOptions = {
   providers: [
